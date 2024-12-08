@@ -30,14 +30,31 @@ Django is a high-level Python web framework that enables rapid development of se
 
 ```bash
 # Create virtual environment
-python -m venv djangoenv
+python -m venv .venv
 
 # Activate virtual environment
-source djangoenv/bin/activate  # Unix
-djangoenv\Scripts\activate     # Windows
+source .venv/bin/activate  # Unix
+.venv\Scripts\activate     # Windows
+source .venv/Scripts/activate   # Windows + Git Bash
 
 # Install Django
 pip install django
+```
+
+### 1.2 Project Initialization
+
+```bash
+# Create Django project
+django-admin startproject my_project
+
+# Navigate to project directory
+cd my_project
+
+# Run Django server
+python manage.py runserver
+
+python manage.py runserver 0.0.0.0:5001 # Custom port
+
 ```
 
 ### 2. Using Poetry
