@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100dvh;
+    width: 100%;
+    background-color: rgb(18, 18, 18);
+    color: azure;
+}
+
+main {
+    min-height: 25dvh;
+    width: 100%;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 25dvh;
+}
+
+div>h1 {
+    font-size: 3rem;
+
+}
