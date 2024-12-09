@@ -1,0 +1,48 @@
+*** Jinja2 And django inner apps ***
+
+
+NOTE - Jinja2 is a inbuilt template injecting method of django framework
+
+Jinja2 denotes with - {% %}
+
+{% block title %}
+    any_value
+{% endblock %}
+
+{% block content %}
+    
+{% endblock %}
+
+
+in main_project inside template/html/index.html
+
+NOTE - 
+    Here we have modified index.html file according to layout.html to fit in.
+
+{% extends "layout.html" %}  = it means that we are extending layout.html file to index.html
+
+{% block title %}
+    Home
+{% endblock %}  = it means that we are adding title to index.html by using dynamic title block provided by Jinja2
+
+
+{% block content %} {% endblock %} = it means that we are adding content of index.html and export it to layout.html where layout.html is the parent wrapper of all other html files.
+
+
+
+
+NOTE - django inner apps:
+    commands:
+        python manage.py startapp myapp
+
+
+main_project ---> settings.py ---> INSTALLED_APPS = [my_app]
+
+
+main_project ---> settings.py ---> TEMPLATES = [{'DIRS': 'templates'}]
+
+main_project ---> 
+
+
+        
+
