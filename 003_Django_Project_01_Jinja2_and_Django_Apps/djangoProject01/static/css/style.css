@@ -12,11 +12,43 @@ body {
     color: azure;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    box-shadow: 0 0 10px rgb(247, 79, 79);
+}
+
+nav>h1 {
+    font-size: 2rem;
+    color: azure;
+}
+
+nav>ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    color: azure;
+}
+
+li>a {
+    text-decoration: none;
+    color: azure;
+    font-size: 1.5rem;
+}
+
+li>a:hover {
+    text-decoration: underline;
+    color: rgb(247, 79, 79);
+}
+
 main {
     min-height: 25dvh;
 }
 
 main>div {
+    padding-top: 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
