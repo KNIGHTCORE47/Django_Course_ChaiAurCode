@@ -1,21 +1,17 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
+{% extends "layout.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
+{% block title %}
+    Home
+{% endblock title %}
 
-<body>
-    <main>
-        <div>
-            <h1>안녕하세요</h1>
-        </div>
-    </main>
+{% block content %}
+<main>
+    <div>
+        <h1>안녕하세요</h1>
+    </div>
+</main>
+{% endblock %}
 
-</body>
 
-</html>
+
+<!-- check NOTES/Notes.txt -->
