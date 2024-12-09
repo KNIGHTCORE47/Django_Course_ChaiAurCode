@@ -1,0 +1,100 @@
+*** Django Framework in Python ***
+
+** Initialize Django Project Commands:
+
+django-admin startproject myproject
+cd myproject
+django-admin startapp app_name
+
+
+
+
+
+
+NOTE - Django is a framework, so be 
+cautious with the naming convention.
+
+NOTE - Every Framework uses a techstack so do Django.
+
+
+Working Method: 
+
+    user -(request)-> website[nginx, caddy, xampp etc.] ---> Django[check for resources and proceed further] ---> url Resolver[determine the url path and resolve] ---> urls.py ---> views.py
+
+    views.py ---> Model.py ---> Database
+
+    views.py ---> templates -(response)-> user
+
+
+NOTE - Django has the ability to create further apps inside of the main django folder. 
+    That is why urls.py can be further refactored and create multi urls.py files to resolve routes.
+
+
+
+
+Working Method: short form
+
+    user -(request)-> urls.py --> views.py
+
+    views.py -(response)-> users
+
+NOTE - views.py:
+        Here views.py has the ability to perfrom different tasks before sending the final response to the user.
+
+        views.py can perform:
+            00. Access Model.py
+            01. Database Query
+            02. templates integration
+            03. Direct response
+            04. etc.
+
+
+
+
+Folder Structure:
+
+outer_folder/
+    ├──.venv/
+    └──my_project/
+        ├── manage.py
+        │
+        ├── my_project/
+        │   ├── __init__.py
+        │   ├── settings.py
+        │   ├── urls.py
+        │   ├── asgi.py
+        │   ├── views.py (**can be created here too.)
+        │   └── wsgi.py
+        │ 
+        ├── static/
+        │   ├── css/
+        │   │   └── style.css
+        │   └── javascript/
+        │       └── script.js
+        │
+        ├── templates/
+        │   └── website/
+        │       ├── index.html
+        │       ├── about.html
+        │       └── etc.html
+        │ 
+        └── app_name/
+            ├── migrations/
+            │   └── __init__.py
+            ├── __init__.py
+            ├── admin.py
+            ├── apps.py
+            ├── models.py
+            ├── tests.py
+            └── views.py
+
+
+
+
+
+NOTE - static folder:
+        this folder holds static files as css or javascripts.
+
+    templates:
+        this folder holds html files.
+
