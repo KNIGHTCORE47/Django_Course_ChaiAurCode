@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} <!-- NOTE - {% load static %} this is called template tag, which is used to load static files -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href={% static 'css/style.css' %}>
+    <!-- NOTE - {% static 'css/style.css' %} is used to load static files from static folder -->
+
 </head>
 
 <body>
