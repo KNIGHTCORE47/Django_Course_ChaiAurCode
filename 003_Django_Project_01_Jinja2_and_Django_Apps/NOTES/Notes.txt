@@ -31,17 +31,30 @@ NOTE -
 
 
 
-NOTE - django inner apps:
+**NOTE - django alwase creates/invokes the inner apps, but we have to manually wiring the apps with the main django project. The process is -
+
+Step01 - django inner apps:
     commands:
-        python manage.py startapp myapp
+        python manage.py startapp my_app
 
+Step02 -
 
-main_project ---> settings.py ---> INSTALLED_APPS = [my_app]
+main_project ---> settings.py ---> INSTALLED_APPS = ['my_app']
 
 
 main_project ---> settings.py ---> TEMPLATES = [{'DIRS': 'templates'}]
 
-main_project ---> 
+main_project ---> urls.py [ 
+    from django.urls import path, include
+
+    path('api/v1/', include('my_app'))
+]
+
+main_project/my_app ---> urls.py
+                    ---> viwes.py
+
+
+
 
 
         
