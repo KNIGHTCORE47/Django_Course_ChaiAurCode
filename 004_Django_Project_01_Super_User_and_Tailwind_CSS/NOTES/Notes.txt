@@ -1,0 +1,116 @@
+*** Tailwind CSS, Migration and Super User in Django ***
+
+
+**** https://docs.chaicode.com/
+
+
+Note - Tailwind:
+
+Django does not support Tailwind out of the box, but there is a pip package.
+
+NOTE - Activate process: -
+
+    python -m ensurepip --upgrade
+
+    # or,
+    python -m pip install --upgrade pip
+
+
+
+    pip install django-tailwind
+    pip install 'django-tailwind[reload]'
+
+
+
+    INSTALLED_APPS = [
+    # ...
+    'tailwind',
+    # ...
+    ]
+
+
+
+    python manage.py tailwind init
+
+
+
+    INSTALLED_APPS = [
+    # ...
+    'theme',
+    # ...
+    ]
+
+    TAILWIND_APP_NAME = 'theme' # This is the name of the app that will be used to generate the tailwind files
+
+    INTERNAL_IPS = ['127.0.0.1']
+
+
+
+    NPM_BIN_PATH = '/usr/local/bin/npm'
+
+    # for windows
+    NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+
+
+
+    INSTALLED_APPS = [
+    # ...
+    'django_browser_reload',
+    #...
+    ]
+
+
+
+
+    MIDDLEWARE = [
+    # ...
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
+    # ...
+    ]
+
+
+
+
+    from django.urls import include, path
+    urlpatterns = [
+        ...,
+        path("__reload__/", include("django_browser_reload.urls")),
+    ]
+
+
+
+    python manage.py tailwind install
+
+
+
+    python manage.py runserver
+
+
+
+    python manage.py tailwind start
+
+
+
+
+
+
+
+NOTE - Super User:
+
+In Django super user are able to access the inbuilt admin panel. Django provided the pre-cooked admin panel and routes to be accessed.
+
+Process: in CMD:
+commands - 
+
+            python manage.py migrate
+
+            python manage.py createsuperuser
+
+            Username:
+            Email:
+            Password:
+            Password (again):
+            Superuser created successfully.
+
+
+            http://127.0.0.1:8000/admin/
