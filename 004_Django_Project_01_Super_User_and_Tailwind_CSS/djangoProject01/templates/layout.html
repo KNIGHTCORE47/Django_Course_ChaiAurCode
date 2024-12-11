@@ -1,3 +1,4 @@
+{% load static tailwind_tags %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -11,10 +12,11 @@
         {% endblock %}
     </title>
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% tailwind_css %}
 </head>
 <body>
     <nav>
-        <h1>Django App</h1>
+        <h1 class="text-xl font-extrabold">Django App</h1>
 
         <div>
             <ul>
