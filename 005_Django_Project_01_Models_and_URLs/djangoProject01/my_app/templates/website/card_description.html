@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block title %}
+    card description
+{% endblock  %}
+
+{% block content %}
+    <main>
+        <div class="p-4">
+            <a 
+                href="javascript:history.back()"
+                class="inline-block px-4 py-2 bg-gray-500 text-white font-semibold rounded-lg shadow-md hover:bg-gray-600"
+            >
+                {{"< Go Back"}}
+            </a>
+        </div>
+
+
+        <div class="p-4">
+            <h1 class='mb-14'>
+                Hello from Django on Card Description Page
+            </h1>
+
+            <p 
+                class="inline-block text-2xl border border-red-400 px-3 py-2"
+            >
+                {{card_id.type}} -
+                {{card_id.description}}
+            </p>
+        </div>
+    </main>
+{% endblock %}

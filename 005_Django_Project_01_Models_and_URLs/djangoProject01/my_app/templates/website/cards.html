@@ -33,13 +33,17 @@
                     {{ items.name }}
                 </h2>
 
-                <div>
+                <div
+                    class="flex justify-between"
+                >
                     <a 
-                        href="#"
-                        class="inline-block bg-gray-200 rounded-lg px-3 py-1 text-sm font-semibold text-gray-700"
+                        href="{% url 'card_description' items.id %}"
+                        class="inline-block bg-gray-200 rounded-md px-3 py-1 text-sm font-semibold text-gray-700 shadow-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-opacity-75"
                     >
                         {{items.type}} - {{items.id}}
                     </a>
+
+                    <p>Price: {{items.price}}/-</p>
                 </div>
 
             </div>
