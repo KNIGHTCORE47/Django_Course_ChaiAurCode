@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Description
+{% endblock %}
+
+
+{% block content %}
+    <div class="p-4">
+        <h1 class="text-3xl font-semibold text-center mb-4">
+            Product Description - {{product.name}}
+        </h1>
+
+        <div 
+            class="bg-gray-400 text-gray-900 p-4 rounded-lg font-semibold"
+        >
+            <p>
+                {{product.chai_type}} - {{product.description}}
+
+            </p>
+        </div>
+    </div>
+{% endblock %}

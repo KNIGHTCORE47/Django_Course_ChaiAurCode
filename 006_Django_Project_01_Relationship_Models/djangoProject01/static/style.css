@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100dvh;
+    width: 100%;
+    background-color: rgb(43, 13, 73);
+    color: azure;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+
+    box-shadow: 0 0 10px rgb(247, 79, 79);
+}
+
+nav>h1 {
+    font-size: 1.65rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+nav>ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    list-style: none;
+    font-size: 1.15rem;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+li>a {
+    text-decoration: none;
+    color: azure;
+}
+
+li>a:hover {
+    color: rgb(230, 23, 123);
+    text-decoration: underline;
+    transition: all 0.2s ease-in-out;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 2rem;
+}

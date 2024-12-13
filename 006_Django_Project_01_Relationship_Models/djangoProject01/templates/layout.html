@@ -1,0 +1,34 @@
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+            Chai App
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    {% tailwind_css %}
+</head>
+<body>
+    <nav>
+        <h1>The Chai App</h1>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="{% url 'products' %}">Products</a></li>
+            <li><a href="#">Store</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+    
+</body>
+</html>

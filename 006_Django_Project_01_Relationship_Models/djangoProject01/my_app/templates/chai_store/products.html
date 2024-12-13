@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Products
+{% endblock %}
+
+
+{% block content %}
+    <div
+        class="w-[100%] p-[3rem]"
+    >
+        <h1 
+            class="text-3xl font-semibold text-center mb-4"
+        >
+            All Products
+        </h1>
+
+
+        <div 
+            class="grid grid-cols-3 gap-4"
+        >
+        {% for element in items %}
+            <div
+                class="bg-gray-400 text-gray-900 rounded-lg p-6 space-y-3"
+            >
+                <img 
+                    src="{{element.image.url}}" 
+                    alt="{{element.name}}"
+                    class="rounded-lg w-full" 
+                >
+
+                <h2 class="text-2xl font-bold">{{element.name}}</h2>
+
+                <div 
+                    class="flex items-center justify-between font-semibold"
+                >
+                    <a 
+                        href="{% url 'product_description' element.id %}"
+                        class="inline-block px-4 py-2 bg-gray-500 text-white font-semibold rounded-lg shadow-md hover:bg-gray-600"
+                    >
+                        {{element.chai_type}} - {{element.id}}
+                    </a>
+
+                    <p>Price - <span class="text-green-900">{{element.price}}</span>/-</p>
+                </div>
+            </div>
+        {% endfor %}
+
+        </div>
+
+    </div>
+
+{% endblock %}
