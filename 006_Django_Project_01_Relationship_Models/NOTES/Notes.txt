@@ -1,0 +1,14 @@
+*** Relationship Models in Django ***
+
+NOTE - Relationship Models of Database
+
+ - one to one
+ - one to many
+ - many to many
+
+
+NOTE - We can import User class from django.contrib.auth.models which is a built-in class in Django
+
+** CASCADE in Database: 
+    - In SQL, CASCADE is used to update or remove an entry from both the parent and child tables at the same time. The ON DELETE or ON UPDATE query uses the phrase CASCADE as a conjunction. If a user tries to delete a statement that will affect the rows in the foreign key table, then those rows will be deleted when the primary key record is deleted. Similarly, if an update statement affects rows in a foreign key table, then those rows will be updated with the value from the primary key record after it has been updated.
+There are different types of cascade, each having a specific purpose in maintaining the consistency of data relationships.
