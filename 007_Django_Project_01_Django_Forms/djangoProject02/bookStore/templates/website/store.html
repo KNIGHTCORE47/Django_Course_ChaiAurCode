@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+    Store
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h1 class='text-3xl font-semibold text-center my-4'>
+            Product Store
+        </h1>
+
+        <div
+            class="grid grid-cols-3 gap-4"
+        >
+            {% for item in products %}
+                <div
+                    class="bg-gray-400 text-gray-900 rounded-lg p-6 space-y-3"
+                >
+                    <img src="{{item.cover_image.url}}" alt="{{item.name}}" class="w-full">
+
+                    <div>
+                        <h1>{{item.name}}</h1>
+                        <p>{{item.price}}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

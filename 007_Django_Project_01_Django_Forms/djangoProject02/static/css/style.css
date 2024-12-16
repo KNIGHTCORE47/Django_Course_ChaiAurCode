@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100dvh;
+    width: 100%;
+    background-color: rgb(16, 6, 6);
+    color: azure;
+}
+
+body>nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 10px rgb(247, 79, 143);
+}
+
+nav>h1 {
+    font-size: 1.5rem;
+    color: azure;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+nav>ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+li>a {
+    text-decoration: none;
+    color: azure;
+}
+
+li>a:hover {
+    color: rgb(247, 79, 143);
+    text-decoration: underline;
+}
+
+body>main {
+    padding: 1rem 2rem;
+}

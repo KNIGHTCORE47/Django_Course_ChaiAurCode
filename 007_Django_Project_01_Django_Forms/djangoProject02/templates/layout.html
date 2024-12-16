@@ -1,0 +1,56 @@
+{% load static tailwind_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+            The Book Store
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% tailwind_css %}
+</head>
+<body>
+    <nav>
+        <h1 class="text-xl font-bold text-green-400">
+            The Book Store
+        </h1>
+
+        <ul
+            class='font-semibold'
+        >
+            <li>
+                <a href="{% url 'home' %}"
+                    class='text-sm'
+                >
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'store' %}"
+                    class='text-sm'
+                >
+                    Store
+                </a>
+            </li>
+            <li>
+                <a href="#"
+                    class='text-sm'
+                >
+                    Contact
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+    
+</body>
+</html>
