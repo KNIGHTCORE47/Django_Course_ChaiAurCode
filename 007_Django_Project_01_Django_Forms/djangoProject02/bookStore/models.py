@@ -49,7 +49,7 @@ class BookReview(models.Model):
 class BookStore(models.Model):
     store_name = models.CharField(max_length=100, default='')
     store_location = models.CharField(max_length=100, default='')
-    collecton_of_books = models.ManyToManyField(Books, related_name='stores')
+    collection_of_books = models.ManyToManyField(Books, related_name='stores')
 
     def __str__(self):
         return self.store_name

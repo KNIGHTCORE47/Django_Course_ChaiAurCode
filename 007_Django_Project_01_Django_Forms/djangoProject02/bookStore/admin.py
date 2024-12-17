@@ -12,7 +12,7 @@ class BooksAdmin(admin.ModelAdmin):
 
 class BookStoreAdmin(admin.ModelAdmin):
     list_display = ('store_name', 'store_location')
-    filter_horizontal = ('collecton_of_books',)
+    filter_horizontal = ('collection_of_books',)
 
 
 class BookNominationAdmin(admin.ModelAdmin):
